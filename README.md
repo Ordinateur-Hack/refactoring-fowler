@@ -1,4 +1,6 @@
 # Refactoring Code
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7566f4d3507c40bcb8e24a53839ef3ec)](https://www.codacy.com/gh/Ordinateur-Hack/refactoring-fowler/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ordinateur-Hack/refactoring-fowler&amp;utm_campaign=Badge_Grade)
+
 This is an exercise for the Software Engineering class at the DHBW Karlsruhe.
 
 **Get Martin Fowler's book [here](http://silab.fon.bg.ac.rs/wp-content/uploads/2016/10/Refactoring-Improving-the-Design-of-Existing-Code-Addison-Wesley-Professional-1999.pdf).**
