@@ -28,9 +28,6 @@ class Customer {
         while (rentals.hasMoreElements()) {
             Rental each = (Rental) rentals.nextElement();
 
-            // 🔀 Refactoring: Extract method
-            double thisAmount = each.getCharge();
-
             // add frequent renter points
             frequentRenterPoints++;
             // add bonus for a two day new release rental
@@ -38,8 +35,10 @@ class Customer {
                 frequentRenterPoints ++;
 
             //show figures for this rental
-            result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(thisAmount) + "\n";
-            totalAmount += thisAmount;
+            result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + each.getCharge() + "\n";
+            // 🔀 Refactoring: Replace Temp with Query
+            // 🔀 Refactoring: Extract method
+            totalAmount += each.getCharge();
         }
         //add footer lines
         result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
