@@ -10,8 +10,7 @@ public class Program
     /**
      * This is the main entry point for the application
      */
-    
-    
+
     public static void main(String args[]) 
     {
         String result;
@@ -26,6 +25,5 @@ public class Program
         result = c1.statement();
         System.out.println(result);
     }
+
 }
-
-
