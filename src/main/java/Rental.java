@@ -16,15 +16,14 @@ class Rental {
     }
 
     public double getCharge() {
+        // 🔀 Refactoring: Replace conditional logic on price code with polymorphism
         return getMovie().getCharge(this.daysRented);
     }
 
     public int getFrequentRenterPoints() {
+        // 🔀 Refactoring: Replace conditional logic on price code with polymorphism
         // 🔀 Refactoring: Extract method
-        if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1)
-            return 2;
-        else
-            return 1;
+        return getMovie().getFrequentRenterPoints(this.daysRented);
     }
 
 }
