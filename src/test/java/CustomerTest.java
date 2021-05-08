@@ -22,9 +22,9 @@ public class CustomerTest {
     @BeforeEach
     private void test() {
         // Movies
-        m1 = new Movie("Movie 1", 1);
-        m2 = new Movie("Movie 2", 2);
-        m3 = new Movie("Movie 3", 3);
+        m1 = new Movie("Movie 1", Movie.REGULAR);
+        m2 = new Movie("Movie 2", Movie.NEW_RELEASE);
+        m3 = new Movie("Movie 3", Movie.CHILDRENS);
 
         // Rentals
         r1 = new Rental(m1, 10);
@@ -55,25 +55,25 @@ public class CustomerTest {
         // Expected results
         String result1Expected = "Rental Record for Customer 1\n" +
                 "\tTitle\t\tDays\tAmount\n" +
-                "\tMovie 1\t\t10\t30.0\n" +
-                "Amount owed is 30.0\n" +
-                "You earned 2 frequent renter points";
+                "\tMovie 1\t\t10\t14.0\n" +
+                "Amount owed is 14.0\n" +
+                "You earned 1 frequent renter points";
         String result2Expected = "Rental Record for Customer 2\n" +
                 "\tTitle\t\tDays\tAmount\n" +
-                "\tMovie 2\t\t5\t4.5\n" +
-                "Amount owed is 4.5\n" +
-                "You earned 1 frequent renter points";
+                "\tMovie 2\t\t5\t15.0\n" +
+                "Amount owed is 15.0\n" +
+                "You earned 2 frequent renter points";
         String result3Expected = "Rental Record for Customer 3\n" +
                 "\tTitle\t\tDays\tAmount\n" +
-                "\tMovie 2\t\t2\t1.5\n" +
-                "\tMovie 3\t\t3\t0.0\n" +
-                "Amount owed is 1.5\n" +
-                "You earned 2 frequent renter points";
+                "\tMovie 2\t\t2\t6.0\n" +
+                "\tMovie 3\t\t3\t1.5\n" +
+                "Amount owed is 7.5\n" +
+                "You earned 3 frequent renter points";
 
-        // Actual <-> Expected
-        assertEquals(result1, result1Expected);
-        assertEquals(result2, result2Expected);
-        assertEquals(result3, result3Expected);
+        // Expected <-> Actual
+        assertEquals(result1Expected, result1);
+        assertEquals(result2Expected, result2);
+        assertEquals(result3Expected, result3);
     }
 
     @Test
@@ -86,23 +86,23 @@ public class CustomerTest {
 
         // Expected results
         String result1Expected = "<h1>Rentals for <em>Customer 1</em></h1><p>\n" +
-                "Movie 1: 30.0<br>\n" +
-                "You owe <em>30.0</em>\n" +
-                "On this rental you earned <em>2</em> frequent renter points</p>";
-        String result2Expected = "<h1>Rentals for <em>Customer 2</em></h1><p>\n" +
-                "Movie 2: 4.5<br>\n" +
-                "You owe <em>4.5</em>\n" +
+                "Movie 1: 14.0<br>\n" +
+                "You owe <em>14.0</em>\n" +
                 "On this rental you earned <em>1</em> frequent renter points</p>";
-        String result3Expected = "<h1>Rentals for <em>Customer 3</em></h1><p>\n" +
-                "Movie 2: 1.5<br>\n" +
-                "Movie 3: 0.0<br>\n" +
-                "You owe <em>1.5</em>\n" +
+        String result2Expected = "<h1>Rentals for <em>Customer 2</em></h1><p>\n" +
+                "Movie 2: 15.0<br>\n" +
+                "You owe <em>15.0</em>\n" +
                 "On this rental you earned <em>2</em> frequent renter points</p>";
+        String result3Expected = "<h1>Rentals for <em>Customer 3</em></h1><p>\n" +
+                "Movie 2: 6.0<br>\n" +
+                "Movie 3: 1.5<br>\n" +
+                "You owe <em>7.5</em>\n" +
+                "On this rental you earned <em>3</em> frequent renter points</p>";
 
-        // Actual <-> Expected
-        assertEquals(result1, result1Expected);
-        assertEquals(result2, result2Expected);
-        assertEquals(result3, result3Expected);
+        // Expected <-> Actual
+        assertEquals(result1Expected, result1);
+        assertEquals(result2Expected, result2);
+        assertEquals(result3Expected, result3);
     }
 
 }
