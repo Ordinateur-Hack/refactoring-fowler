@@ -17,7 +17,7 @@ class Rental {
 
     public double getCharge() {
         // 🔀 Refactoring: Replace conditional logic on price code with polymorphism
-        return getMovie().getCharge(this.daysRented);
+        return getMovie().getPrice().getCharge(this.daysRented);
     }
 
     public int getFrequentRenterPoints() {
