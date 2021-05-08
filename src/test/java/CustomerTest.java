@@ -81,11 +81,8 @@ public class CustomerTest {
     public void testHtmlStatements() {
         // Actual results
         String result1 = c1.htmlStatement();
-        System.out.println(result1);
         String result2 = c2.htmlStatement();
-        System.out.println(result2);
         String result3 = c3.htmlStatement();
-        System.out.println(result3);
 
         // Expected results
         String result1Expected = "<h1>Rentals for <em>Customer 1</em></h1><p>\n" +
