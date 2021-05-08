@@ -76,4 +76,36 @@ public class CustomerTest {
         assertEquals(result3, result3Expected);
     }
 
+    @Test
+    @DisplayName("HTML Statements should return correct String")
+    public void testHtmlStatements() {
+        // Actual results
+        String result1 = c1.htmlStatement();
+        System.out.println(result1);
+        String result2 = c2.htmlStatement();
+        System.out.println(result2);
+        String result3 = c3.htmlStatement();
+        System.out.println(result3);
+
+        // Expected results
+        String result1Expected = "<h1>Rentals for <em>Customer 1</em></h1><p>\n" +
+                "Movie 1: 30.0<br>\n" +
+                "You owe <em>30.0</em>\n" +
+                "On this rental you earned <em>2</em> frequent renter points</p>";
+        String result2Expected = "<h1>Rentals for <em>Customer 2</em></h1><p>\n" +
+                "Movie 2: 4.5<br>\n" +
+                "You owe <em>4.5</em>\n" +
+                "On this rental you earned <em>1</em> frequent renter points</p>";
+        String result3Expected = "<h1>Rentals for <em>Customer 3</em></h1><p>\n" +
+                "Movie 2: 1.5<br>\n" +
+                "Movie 3: 0.0<br>\n" +
+                "You owe <em>1.5</em>\n" +
+                "On this rental you earned <em>2</em> frequent renter points</p>";
+
+        // Actual <-> Expected
+        assertEquals(result1, result1Expected);
+        assertEquals(result2, result2Expected);
+        assertEquals(result3, result3Expected);
+    }
+
 }
