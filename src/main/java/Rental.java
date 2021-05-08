@@ -16,7 +16,7 @@ class Rental {
     }
 
     public double getCharge() {
-        // 🔀 Refactoring: Move method to object whose data the method uses
+        // 🔀 Refactoring: Extract method to object whose data the method uses
         // 🔀 Refactoring: Rename variables for better readability
         double result = 0;
         switch (getMovie().getPriceCode()) {
@@ -35,6 +35,14 @@ class Rental {
                 break;
         }
         return result;
+    }
+
+    public int getFrequentRenterPoints() {
+        // 🔀 Refactoring: Extract method
+        if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1)
+            return 2;
+        else
+            return 1;
     }
 
 }
