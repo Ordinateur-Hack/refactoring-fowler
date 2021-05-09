@@ -1,3 +1,5 @@
+package me.splines;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -22,9 +24,9 @@ public class CustomerTest {
     @BeforeEach
     private void test() {
         // Movies
-        m1 = new Movie("Movie 1", Movie.REGULAR);
-        m2 = new Movie("Movie 2", Movie.NEW_RELEASE);
-        m3 = new Movie("Movie 3", Movie.CHILDRENS);
+        m1 = new Movie("me.splines.Movie 1", Movie.REGULAR);
+        m2 = new Movie("me.splines.Movie 2", Movie.NEW_RELEASE);
+        m3 = new Movie("me.splines.Movie 3", Movie.CHILDRENS);
 
         // Rentals
         r1 = new Rental(m1, 10);
@@ -33,9 +35,9 @@ public class CustomerTest {
         r4 = new Rental(m3, 3);
 
         // Customers
-        c1 = new Customer("Customer 1");
-        c2 = new Customer("Customer 2");
-        c3 = new Customer("Customer 3");
+        c1 = new Customer("me.splines.Customer 1");
+        c2 = new Customer("me.splines.Customer 2");
+        c3 = new Customer("me.splines.Customer 3");
 
         // Rentals <-> Customers
         c1.addRental(r1);
@@ -53,20 +55,20 @@ public class CustomerTest {
         String result3 = c3.statement();
 
         // Expected results
-        String result1Expected = "Rental Record for Customer 1\n" +
+        String result1Expected = "me.splines.Rental Record for me.splines.Customer 1\n" +
                 "\tTitle\t\tDays\tAmount\n" +
-                "\tMovie 1\t\t10\t14.0\n" +
+                "\tme.splines.Movie 1\t\t10\t14.0\n" +
                 "Amount owed is 14.0\n" +
                 "You earned 1 frequent renter points";
-        String result2Expected = "Rental Record for Customer 2\n" +
+        String result2Expected = "me.splines.Rental Record for me.splines.Customer 2\n" +
                 "\tTitle\t\tDays\tAmount\n" +
-                "\tMovie 2\t\t5\t15.0\n" +
+                "\tme.splines.Movie 2\t\t5\t15.0\n" +
                 "Amount owed is 15.0\n" +
                 "You earned 2 frequent renter points";
-        String result3Expected = "Rental Record for Customer 3\n" +
+        String result3Expected = "me.splines.Rental Record for me.splines.Customer 3\n" +
                 "\tTitle\t\tDays\tAmount\n" +
-                "\tMovie 2\t\t2\t6.0\n" +
-                "\tMovie 3\t\t3\t1.5\n" +
+                "\tme.splines.Movie 2\t\t2\t6.0\n" +
+                "\tme.splines.Movie 3\t\t3\t1.5\n" +
                 "Amount owed is 7.5\n" +
                 "You earned 3 frequent renter points";
 
@@ -85,17 +87,17 @@ public class CustomerTest {
         String result3 = c3.htmlStatement();
 
         // Expected results
-        String result1Expected = "<h1>Rentals for <em>Customer 1</em></h1><p>\n" +
-                "Movie 1: 14.0<br>\n" +
+        String result1Expected = "<h1>Rentals for <em>me.splines.Customer 1</em></h1><p>\n" +
+                "me.splines.Movie 1: 14.0<br>\n" +
                 "You owe <em>14.0</em>\n" +
                 "On this rental you earned <em>1</em> frequent renter points</p>";
-        String result2Expected = "<h1>Rentals for <em>Customer 2</em></h1><p>\n" +
-                "Movie 2: 15.0<br>\n" +
+        String result2Expected = "<h1>Rentals for <em>me.splines.Customer 2</em></h1><p>\n" +
+                "me.splines.Movie 2: 15.0<br>\n" +
                 "You owe <em>15.0</em>\n" +
                 "On this rental you earned <em>2</em> frequent renter points</p>";
-        String result3Expected = "<h1>Rentals for <em>Customer 3</em></h1><p>\n" +
-                "Movie 2: 6.0<br>\n" +
-                "Movie 3: 1.5<br>\n" +
+        String result3Expected = "<h1>Rentals for <em>me.splines.Customer 3</em></h1><p>\n" +
+                "me.splines.Movie 2: 6.0<br>\n" +
+                "me.splines.Movie 3: 1.5<br>\n" +
                 "You owe <em>7.5</em>\n" +
                 "On this rental you earned <em>3</em> frequent renter points</p>";
 

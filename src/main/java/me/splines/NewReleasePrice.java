@@ -1,3 +1,5 @@
+package me.splines;
+
 public class NewReleasePrice extends Price {
 
     public int getPriceCode() {

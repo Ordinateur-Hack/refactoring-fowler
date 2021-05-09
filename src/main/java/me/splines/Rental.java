@@ -1,3 +1,5 @@
+package me.splines;
+
 class Rental {
     private Movie movie;
     private int daysRented;

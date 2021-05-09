@@ -1,3 +1,5 @@
+package me.splines;
+
 import java.util.Enumeration;
 import java.util.Vector;
 
@@ -19,7 +21,7 @@ class Customer {
 
     public String statement() {
         Enumeration rentals = this.rentals.elements();
-        String result = "Rental Record for " + this.getName() + "\n";
+        String result = "me.splines.Rental Record for " + this.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
         while (rentals.hasMoreElements()) {

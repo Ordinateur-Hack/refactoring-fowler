@@ -6,6 +6,8 @@
 
     <groupId>me.splines</groupId>
     <artifactId>refactoring-fowler</artifactId>
+    <name>Refactoring Fowler</name>
+    <description>Software Engineering homework</description>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
