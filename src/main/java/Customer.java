@@ -1,6 +1,5 @@
-
-import java.lang.*;
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
 class Customer {
     private String name;
@@ -8,7 +7,7 @@ class Customer {
 
     public Customer (String name){
         this.name = name;
-    };
+    }
 
     public void addRental(Rental arg) {
         this.rentals.addElement(arg);
@@ -16,7 +15,7 @@ class Customer {
 
     public String getName (){
         return name;
-    };
+    }
 
     public String statement() {
         Enumeration rentals = this.rentals.elements();
