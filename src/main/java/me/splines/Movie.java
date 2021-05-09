@@ -38,7 +38,7 @@ public class Movie {
         return title;
     }
 
-    int getFrequentRenterPoints(int daysRented) {
+    public int getFrequentRenterPoints(int daysRented) {
         // 🔀 Refactoring: Replace conditional logic on price code with polymorphism
         // 🔀 Refactoring: Extract method
         // 🔀 Refactoring: Replace conditional logic on price code with polymorphism
