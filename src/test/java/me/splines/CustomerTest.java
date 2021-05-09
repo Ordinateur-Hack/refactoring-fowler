@@ -13,7 +13,7 @@ public class CustomerTest {
     private Customer c3;
 
     @BeforeEach
-    private void test() {
+    public void setUp() {
         // Movies
         Movie m1 = new Movie("me.splines.Movie 1", Movie.REGULAR);
         Movie m2 = new Movie("me.splines.Movie 2", Movie.NEW_RELEASE);
