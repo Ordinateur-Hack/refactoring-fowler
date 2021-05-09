@@ -1,6 +1,6 @@
 public class NewReleasePrice extends Price {
 
-    int getPriceCode() {
+    public int getPriceCode() {
         return Movie.NEW_RELEASE;
     }
 
