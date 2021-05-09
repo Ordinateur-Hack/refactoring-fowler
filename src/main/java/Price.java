@@ -8,4 +8,8 @@ public abstract class Price {
     // 🔀 Refactoring: Rename variables for better readability
     abstract double getCharge(int daysRented);
 
+    int getFrequentRenterPoints(int daysRented) {
+        return 1;
+    }
+
 }

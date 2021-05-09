@@ -21,8 +21,6 @@ class Rental {
     }
 
     public int getFrequentRenterPoints() {
-        // 🔀 Refactoring: Replace conditional logic on price code with polymorphism
-        // 🔀 Refactoring: Extract method
         return getMovie().getFrequentRenterPoints(this.daysRented);
     }
 

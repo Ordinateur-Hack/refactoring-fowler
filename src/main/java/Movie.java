@@ -38,10 +38,9 @@ public class Movie {
 
     int getFrequentRenterPoints(int daysRented) {
         // 🔀 Refactoring: Replace conditional logic on price code with polymorphism
-        if ((price.getPriceCode() == Movie.NEW_RELEASE) && daysRented > 1)
-            return 2;
-        else
-            return 1;
+        // 🔀 Refactoring: Extract method
+        // 🔀 Refactoring: Replace conditional logic on price code with polymorphism
+        return price.getFrequentRenterPoints(daysRented);
     }
 
 }
