@@ -8,15 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CustomerTest {
 
-    private Movie m1;
-    private Movie m2;
-    private Movie m3;
-
-    private Rental r1;
-    private Rental r2;
-    private Rental r3;
-    private Rental r4;
-
     private Customer c1;
     private Customer c2;
     private Customer c3;
@@ -24,15 +15,15 @@ public class CustomerTest {
     @BeforeEach
     private void test() {
         // Movies
-        m1 = new Movie("me.splines.Movie 1", Movie.REGULAR);
-        m2 = new Movie("me.splines.Movie 2", Movie.NEW_RELEASE);
-        m3 = new Movie("me.splines.Movie 3", Movie.CHILDRENS);
+        Movie m1 = new Movie("me.splines.Movie 1", Movie.REGULAR);
+        Movie m2 = new Movie("me.splines.Movie 2", Movie.NEW_RELEASE);
+        Movie m3 = new Movie("me.splines.Movie 3", Movie.CHILDRENS);
 
         // Rentals
-        r1 = new Rental(m1, 10);
-        r2 = new Rental(m2, 5);
-        r3 = new Rental(m2, 2);
-        r4 = new Rental(m3, 3);
+        Rental r1 = new Rental(m1, 10);
+        Rental r2 = new Rental(m2, 5);
+        Rental r3 = new Rental(m2, 2);
+        Rental r4 = new Rental(m3, 3);
 
         // Customers
         c1 = new Customer("me.splines.Customer 1");
